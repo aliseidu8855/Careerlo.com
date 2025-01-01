@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -81,6 +82,9 @@ CORS_ALLOW_ALL_ORIGINS = True  # For development only
 DATABASES = {
     "default": dj_database_url.config(default = config("Database_URL"))
 }
+
+# Custom user model
+AUTH_USER_MODEL = 'users.CustomUserModel'
 
 
 # Password validation
